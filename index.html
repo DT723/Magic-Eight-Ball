@@ -5,9 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gugi&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
     <title>Magic Eight Ball</title>
   </head>
   <body>
+    <div class="container-header">
+      <p class="free">IT'S FREE!</p>
+      <p class="play-now">PLAY NOW!</p>
+
+      <div class="box">
+        <h1 class="title">
+          Let's Play Magic<br />
+          8-Ball!
+        </h1>
+        <p class="description">
+          Please ask a question, no question mark needed.<br />
+          Then click on the Magic 8-ball to see your fortune!
+        </p>
+        <input
+          id="input"
+          type="text"
+          onfocus="this.value=''"
+          value="ask question here"
+          required
+        />
+      </div>
+    </div>
+    <div class="container">
+      <div class="ball">
+        <div class="hole">
+          <div class="message-holder">
+            <div class="glass">
+              <p id="message">Get Your Fortune Today</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
