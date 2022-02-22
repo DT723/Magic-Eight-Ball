@@ -51,7 +51,6 @@ const fadeInAnimation = () => {
     message.innerHTML = messages[Math.floor(Math.random() * messages.length)];
   }, 4000);
 };
-console.log(fadeInAnimation);
 
 const fadeOutAnimation = callback => {
   holder.style.opacity = 0;
