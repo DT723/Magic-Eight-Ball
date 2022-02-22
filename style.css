@@ -3,6 +3,7 @@ body {
   background: rgb(0, 0, 0);
   background: radial-gradient(circle, rgb(3, 3, 3) 20%, rgb(65, 54, 54) 100%);
   height: 100vh;
+  font-size: 62.5%;
 }
 
 .container-header {
@@ -18,7 +19,7 @@ body {
 .free {
   order: -1;
   font-family: gugi, sans-serif;
-  font-size: 45px;
+  font-size: 5rem;
   transform: rotate(-20deg);
   -webkit-transform: rotate(-20deg);
   -moz-transform: rotate(-20deg);
@@ -28,12 +29,31 @@ body {
   text-shadow: 0 0 5px rgb(10, 226, 10), 0 0 10px rgb(10, 226, 10),
     0 0 20px rgb(10, 226, 10), 0 0 40px rgb(10, 226, 10),
     0 0 80px rgb(10, 226, 10);
+  animation: animate1 3s infinite alternate;
+  -webkit-animation: animate1 3s infinite alternate;
+}
+@keyframes animate1 {
+  40% {
+    opacity: 1;
+  }
+  42% {
+    opacity: 0.8;
+  }
+  43% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 0.3;
+  }
+  46% {
+    opacity: 1;
+  }
 }
 
 .play-now {
   order: 3;
   font-family: gugi, sans-serif;
-  font-size: 45px;
+  font-size: 5rem;
   transform: rotate(20deg);
   -webkit-transform: rotate(20deg);
   -moz-transform: rotate(20deg);
@@ -43,6 +63,25 @@ body {
   text-shadow: 0 0 5px rgb(10, 226, 216), 0 0 10px rgb(10, 226, 216),
     0 0 20px rgb(10, 226, 216), 0 0 40px rgb(10, 226, 216),
     0 0 80px rgb(10, 226, 216);
+  animation: animate2 2s infinite alternate;
+  -webkit-animation: animate2 2s infinite alternate;
+}
+@keyframes animate2 {
+  38% {
+    opacity: 1;
+  }
+  42% {
+    opacity: 0.8;
+  }
+  44% {
+    opacity: 1;
+  }
+  48% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
 }
 
 .box {
@@ -63,7 +102,7 @@ body {
 h1 {
   margin-top: 0px;
   font-family: 'Press Start 2p', sans-serif;
-  font-size: 30px;
+  font-size: 3rem;
   line-height: 40px;
   text-shadow: 3px 3px 2px rgb(80, 3, 70);
 }
@@ -72,7 +111,7 @@ h1 {
   margin-top: 0px;
   line-height: 25px;
   font-family: 'Press Start 2p', sans-serif;
-  font-size: 14px bold;
+  font-size: 1.5rem;
 }
 
 input {
@@ -83,6 +122,7 @@ input {
   font-family: 'Press Start 2p', sans-serif;
   background-color: rgb(151, 147, 147);
   color: rgb(14, 13, 13);
+  opacity: 0.5;
   font-size: 14px;
   text-align: center;
   cursor: pointer;
@@ -90,6 +130,10 @@ input {
 
 input:focus {
   outline: none;
+}
+
+input::placeholder {
+  color: rgb(68, 67, 67);
 }
 
 .container {
@@ -100,6 +144,7 @@ input:focus {
   width: 100%;
   align-items: flex-start;
   margin-top: 80px;
+  margin-left: -23px;
 }
 
 .ball {
@@ -177,6 +222,7 @@ input:focus {
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
   perspective: 1000px;
+  -webkit-animation: shake 4s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
 }
 
 @keyframes shake {
