@@ -1,3 +1,3 @@
 # Magic-Eight-Ball
 Built with JS, HTML and CSS
-Working with switch statements, random numbers and if/else statements.
+Working with arrays, random numbers and if/else statements.
