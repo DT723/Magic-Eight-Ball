@@ -140,11 +140,10 @@ input::placeholder {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  height: auto;
   width: 100%;
   align-items: flex-start;
   margin-top: 80px;
-  margin-left: -23px;
 }
 
 .ball {
@@ -162,6 +161,7 @@ input::placeholder {
   border-radius: 100%;
   box-shadow: inset -25px -15px 30px rgba(90, 90, 90, 0.3);
   transition: margin 0.25s ease-in;
+  margin-left: -20px;
 }
 
 .hole {
@@ -261,5 +261,122 @@ input::placeholder {
     -moz-transform: translate3d(4px, 0, 0);
     -ms-transform: translate3d(4px, 0, 0);
     -o-transform: translate3d(4px, 0, 0);
+  }
+}
+
+/* Media Query */
+
+@media screen and (max-device-width: 1180px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .play-now,
+  .free {
+    font-size: 4rem;
+  }
+  .ball {
+    height: 450px;
+    width: 450px;
+  }
+}
+
+@media screen and (max-device-width: 870px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .play-now,
+  .free {
+    font-size: 3rem;
+  }
+  .ball {
+    height: 400px;
+    width: 400px;
+  }
+  .title {
+    font-size: 2.5rem;
+  }
+  .description {
+    font-size: 1.4rem;
+  }
+  #message {
+    font-size: 16.5px;
+  }
+}
+
+@media screen and (max-device-width: 590px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .play-now,
+  .free {
+    display: none;
+  }
+  .ball {
+    height: 400px;
+    width: 400px;
+    margin-left: 0px;
+  }
+  .title {
+    font-size: 2.5rem;
+  }
+  .description {
+    font-size: 1.4rem;
+  }
+  #message {
+    font-size: 16.5px;
+  }
+  .box {
+    width: 60%;
+  }
+}
+
+@media screen and (max-device-width: 420px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .play-now,
+  .free {
+    display: none;
+  }
+  .ball {
+    height: 350px;
+    width: 350px;
+    margin-left: 0px;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .description {
+    font-size: 1.3rem;
+  }
+  #message {
+    font-size: 16.5px;
+  }
+  .box {
+    width: 73%;
+  }
+}
+
+@media screen and (max-device-width: 300px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .play-now,
+  .free {
+    display: none;
+  }
+  .ball {
+    height: 255px;
+    width: 250px;
+    margin-left: 0px;
+  }
+  .title {
+    font-size: 1.5rem;
+  }
+  .description {
+    font-size: 1.1rem;
+  }
+  #message {
+    font-size: 15px;
+    margin: 50px auto;
+  }
+  .box {
+    width: 73%;
+  }
+  .hole {
+    width: 150px;
+    height: 150px;
+  }
+  .message-holder {
+    margin-top: 35px;
+    margin-left: 10px;
+    border-left: 63px solid transparent;
+    border-right: 64px solid transparent;
+    border-top: 113px solid #a2a2a2;
   }
 }
